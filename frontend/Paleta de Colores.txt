@@ -1,0 +1,10 @@
+palette: {
+    primary: {
+      main: '#0D1321',
+    },
+    secondary: {
+      main: '#1D2D44',
+    },
+    tertiary: {
+      main: '#3E5C76',
+    },
