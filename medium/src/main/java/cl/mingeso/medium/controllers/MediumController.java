@@ -19,14 +19,12 @@ public class MediumController {
     MediumService mediumService;
 
     @GetMapping
-    @CrossOrigin(origins = "*")
     public ResponseEntity<List<MediumEntity>> getQuestions(){
         List<MediumEntity> questions = mediumService.getQuestions();
         return ResponseEntity.ok(questions);
     }
 
     @PostMapping
-    @CrossOrigin(origins = "*")
     public ResponseEntity<MediumEntity> createQuestion(MediumEntity question){
         MediumEntity newQuestion = mediumService.createQuestion(question);
         return ResponseEntity.ok(newQuestion);

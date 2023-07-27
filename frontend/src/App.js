@@ -7,6 +7,9 @@ import './fonts/TitilliumWeb-Regular.ttf';
 import './fonts/TitilliumWeb-Bold.ttf';
 import CreateQuestion from './components/CreateQuestion';
 import TestEasy from './components/TestEasy';
+import TestMedium from './components/TestMedium';
+import TestHard from './components/TestHard';
+import TestResults from './components/TestResults';
 
 const theme = createTheme({
   palette: {
@@ -33,6 +36,9 @@ function App() {
           <Route path="/" element={<HomeComponent />} />
           <Route path="/create-question" element={<CreateQuestion />} />
           <Route path="/test-easy" element={<TestEasy />} />
+          <Route path="/test-medium" element={<TestMedium />} />
+          <Route path="/test-hard" element={<TestHard />} />
+          <Route path="/test-results" element={<TestResults />} />
         </Routes>
       </Router>
     </ThemeProvider>

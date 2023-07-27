@@ -20,14 +20,12 @@ public class HardController {
     HardService hardService;
 
     @GetMapping
-    @CrossOrigin(origins = "*")
     public ResponseEntity<List<HardEntity>> getQuestions(){
         List<HardEntity> questions = hardService.getQuestions();
         return ResponseEntity.ok(questions);
     }
 
     @PostMapping
-    @CrossOrigin(origins = "*")
     public ResponseEntity<HardEntity> createQuestion(HardEntity question){
         HardEntity newQuestion = hardService.createQuestion(question);
         return ResponseEntity.ok(newQuestion);

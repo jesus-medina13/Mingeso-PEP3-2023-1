@@ -18,8 +18,7 @@ public class MediumEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
+    private String question;
     private String code;
     private String answer;
-    private String question;
 }

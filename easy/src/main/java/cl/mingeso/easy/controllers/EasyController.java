@@ -19,14 +19,12 @@ public class EasyController {
     EasyService easyService;
 
     @GetMapping
-    @CrossOrigin(origins = "*")
     public ResponseEntity<List<EasyEntity>> getQuestions(){
         List<EasyEntity> questions = easyService.getQuestions();
         return ResponseEntity.ok(questions);
     }
 
     @PostMapping
-    @CrossOrigin(origins = "*")
     public ResponseEntity<EasyEntity> createQuestion(EasyEntity question){
         EasyEntity newQuestion = easyService.createQuestion(question);
         return ResponseEntity.ok(newQuestion);

@@ -68,7 +68,8 @@ const ToolbarWrapper = styled(Toolbar)(({ theme }) => ({
 
 const HomeComponent = () => {
   const theme = useTheme();
-
+  localStorage.setItem("puntaje", 0);
+  localStorage.setItem("restantes", 4);
   return (
     <React.Fragment>
       <Navbar position="static">
@@ -104,6 +105,7 @@ const HomeComponent = () => {
           </Link>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
+        <Link to="test-medium">
           <ButtonWrapper theme={theme}>
             <CustomButton component="div">
               <ButtonContentWrapper>
@@ -116,8 +118,10 @@ const HomeComponent = () => {
               </ButtonContentWrapper>
             </CustomButton>
           </ButtonWrapper>
+          </Link>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
+        <Link to="test-hard">
           <ButtonWrapper theme={theme}>
             <CustomButton component="div">
               <ButtonContentWrapper>
@@ -130,6 +134,7 @@ const HomeComponent = () => {
               </ButtonContentWrapper>
             </CustomButton>
           </ButtonWrapper>
+          </Link>
         </Grid>
       </Container>
     </React.Fragment>
